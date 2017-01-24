@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if @user.microposts.first != nil
+      @micropost = @user.microposts.first
+    end
   end
 
   # GET /users/new
